@@ -89,11 +89,12 @@ style: |
   section.section-break h1 { color: #fff; font-size: 64px; }
   section.section-break h2 { color: #84f3e9; }
   section.section-break::after { color: #bcdcff; }
-  .columns {
-    columns: 2;
-    column-gap: 58px;
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 58px;
   }
-  .columns li { break-inside: avoid; }
+  .two-columns ul { margin-top: 0; }
 ---
 
 <!-- _class: lead -->
@@ -201,17 +202,26 @@ Libraries, component libraries, frameworks and the tooling that connects them.
 
 # Libraries, Component Libraries and Frameworks
 
-<div class="columns">
+<div class="two-columns">
+
+<div>
 
 - **Libraries** provide reusable functionality that application code can call
 - **Component libraries** provide pre-built UI building blocks
 - **Frameworks** provide conventions and structure for organising applications
-- `@salt-ds` is a component library <br><small>Material UI and shadcn/ui are others</small>
+- Internal libraries provide domain-specific functionality
+
+</div>
+
+<div>
+
+- `@salt-ds` is a component library
 - `@vuu-ui` includes framework and component library packages
 - D3.js and Moment.js are examples of libraries
 - React is a library that encroaches in places into framework territory
 - Next.js is a framework
-- Internal libraries provide domain-specific functionality
+
+</div>
 
 </div>
 
