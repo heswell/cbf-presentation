@@ -109,6 +109,7 @@ style: |
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+  section.vuu-server small a { color: #fff; }
   section.vuu-server::after { color: #c7cbde; }
   section.vuu-server li::marker { color: #c7cbde; }
 ---
