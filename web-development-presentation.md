@@ -4,122 +4,63 @@ theme: default
 paginate: true
 ---
 
-# From Web Fundamentals to Modern Application Development
-
-- How the browser turns code into interfaces
-- From HTML, CSS and JavaScript to applications
-- Tools, libraries, design systems and AI
-
----
-
 # Session Roadmap
 
 - Presentation: concepts and vocabulary
 - Demos: seeing the concepts in practice
 - Exercise: applying the concepts independently
-- Goal: understand how the pieces fit together
+
+---
+
+# From Web Fundamentals to Modern Application Development
+
+- How the browser turns code into interfaces
+- From HTML, CSS and JavaScript to assembled applications
+- Pre-existing components, data sources and glue code
+
+---
+
+# Key Building Blocks
+
+- React: the application UI framework
+- Salt: the design system, including themes and components (https://www.saltdesignsystem.com/salt/index)
+- Vuu: reusable components and functionality for data-driven applications (https://github.com/finos/vuu)
+- We will describe each building block in more detail later
 
 ---
 
 # The Web Development Landscape
 
 - The browser is the runtime environment
-- Applications are built from layers
+- Applications are assembled from layers and reusable parts
 - HTML: structure and meaning
 - CSS: appearance and layout
 - JavaScript: behaviour and interaction
-
----
-
-# How a Browser Builds an Interface
-
-- Request and response
-- HTML creates the document structure
-- CSS is applied to the document
-- JavaScript can inspect and change the document
-- The browser renders the final result
-
----
+- Component libraries provide much of the UI
+- The Salt design system provides shared design guidance and themes
 
 # HTML: Structure and Meaning
 
 - Elements describe the content
 - Attributes provide additional information
 - Semantic HTML improves accessibility and maintainability
-- Common elements:
-  - Headings
-  - Paragraphs
-  - Links
-  - Images
-  - Forms
-  - Lists
-
----
-
-# HTML: Building Good Foundations
-
-- Use the right element for the right purpose
-- Organise content hierarchically
+- Define the page structure and layout
+- Use semantic elements where application code needs them
 - Associate labels with form controls
-- Provide meaningful alternative text
-- Prefer semantic elements over unnecessary `<div>` elements
+- Preserve accessibility when composing components
 
 ---
 
-# CSS: Describing Presentation
+# CSS: Describing Presentation with a Design System
 
-- Select elements to style
-- Apply properties and values
-- Understand the cascade
-- Understand inheritance
-- Use classes to create reusable styles
+- Component libraries provide most of the detailed styling
+- Define layout, spacing and application-specific composition
 - Keep structure and presentation separate
-
----
-
-# CSS Layout Fundamentals
-
-- The box model
-- `display`
-- Flexbox
-- CSS Grid
-- Positioning
-- Responsive layouts
-- Designing for different screen sizes
-
----
-
-# CSS: From Styling to Systems
-
-- Repeated values become design tokens
-- Shared patterns become reusable components
 - Consistent spacing and typography improve usability
+- Shared patterns become reusable components
+- Salt theme variables provide shared design tokens
 - Responsive and accessible behaviour should be intentional
-- CSS can express both simple styles and complex layouts
-
----
-
-# JavaScript in Modern Web Applications
-
-- Connect user interactions to application behaviour
-- Manage state and synchronise the interface
-- Communicate with APIs and WebSocket services
-- Respond to asynchronous events
-- Update components efficiently
-- Handle loading, error and disconnected states
-- Keep application logic separate from presentation
-- Use TypeScript and tooling to improve maintainability
-
----
-
-# JavaScript in the Browser
-
-- Selecting elements
-- Listening for user events
-- Updating content and styles
-- Validating form input
-- Managing application state
-- Fetching and displaying data
+- CSS custom properties connect the theme to component styling
 
 ---
 
@@ -127,24 +68,63 @@ paginate: true
 
 - JavaScript runs in the browser
 - TypeScript adds static type checking
+- TypeScript is a development time extension to JavaScript that is stripped away before the JavaScript is deployed
 - Types document expected data
-- Types help catch mistakes earlier
-- TypeScript is compiled to JavaScript
-- Both use the same underlying web platform
+- Types eliminate a certain category of bugs
+- Types help navigate a large codebase and show the impact of changes
+- Types can be used by tools to help automate refactoring
 
 ---
 
-# From UI Views to Applications
+# Libraries, Component Libraries and Frameworks
+
+- Libraries provide reusable functionality that application code can call
+- Component libraries provide pre-built UI building blocks
+- Frameworks provide conventions and structure for organising applications
+- `@salt-ds` is a component library (so are Material UI and shadcn/ui)
+- `@vuu-ui` includes framework and component library packages
+- D3.js and Moment.js are examples of libraries
+- React is a library that encroaches in places into framework territory
+- Next.js is a framework
+- Internal libraries provide domain-specific functionality
+
+---
+
+# Web Development Tooling
+
+- Package managers: npm, pnpm or yarn
+- Bundlers and development servers
+- Linters and formatters
+- Type checking
+- Testing tools
+- Version control with Git
+- Tooling automates repetitive checks and tasks
+
+---
+
+# Building Web Applications
+
+- Use a foundational library - React is the most popular
+- Combine and configure existing and custom components with layout to construct 'pages' or 'views'
+- Bind components to application behaviour and data
+- Manage state and synchronise the interface
+- Communicate with APIs and WebSocket services
+- Respond to asynchronous events
+- Handle loading, error and disconnected states
+- Keep application logic separate from presentation
+
+---
+
+# Features of Modern Web Applications
 
 - An application presents information and manages interaction
-- Each UI view reflects application state
 - Applications often include:
   - Multiple views
   - Forms and validation
-  - Remote data
-  - User accounts
+  - Remote data, possibly real-time
+  - User accounts with varied permissioning
+  - Persisting user settings across sessions
   - Complex workflows
-- Complexity requires structure and conventions
 
 ---
 
@@ -160,48 +140,13 @@ paginate: true
   - Trading screens
   - Live prices and market data
   - Order status updates
-  - Chat and collaboration tools
-- Real-time interfaces must handle:
-  - Connection loss
-  - Reconnection
-  - Out-of-order messages
-  - High volumes of updates
-
----
-
-# Libraries and Frameworks
-
-- Libraries provide reusable functionality
-- Frameworks provide stronger application structure
-- Examples:
-  - React
-  - Vue
-  - Angular
-  - Svelte
-- Learn the underlying web platform first
-- Use abstractions when they solve a real problem
-
----
-
-# Component Libraries
-
-- Reusable UI building blocks
-- Examples:
-  - Buttons
-  - Inputs
-  - Dialogs
-  - Tables
-  - Navigation
-- Components improve consistency
-- APIs and states must be understood
-- Components should remain accessible and adaptable
-
----
 
 # Design Systems
 
+- Salt is a complete design system, not just a component library
 - A shared language for design and development
-- Design tokens:
+- The Salt theme is a collection of CSS custom variables
+- Shared design tokens:
   - Colour
   - Typography
   - Spacing
@@ -213,6 +158,18 @@ paginate: true
 
 ---
 
+# Accessibility
+
+- We aspire to support WCAG 2.1
+- Use semantic HTML and accessible names
+- Ensure keyboard access and visible focus states
+- Provide sufficient colour contrast
+- Support clear structure, labelling and error feedback
+- Prefer accessible components and preserve their intended behaviour
+- Test critical workflows with automated and manual checks
+
+---
+
 # Design Tools and Figma
 
 - Design tools communicate ideas before implementation
@@ -221,18 +178,6 @@ paginate: true
 - Compare design intent with browser behaviour
 - Use Figma as a bridge between design and implementation
 - Ask questions when designs are ambiguous
-
----
-
-# JavaScript Tooling
-
-- Package managers: npm, pnpm or yarn
-- Bundlers and development servers
-- Linters and formatters
-- Type checking
-- Testing tools
-- Version control with Git
-- Tooling automates repetitive checks and tasks
 
 ---
 
