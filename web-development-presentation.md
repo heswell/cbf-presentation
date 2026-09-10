@@ -97,14 +97,20 @@ style: |
   .two-columns ul { margin-top: 0; }
   section.vuu-server {
     background:
-      radial-gradient(circle at 86% 24%, rgba(84, 199, 236, .3), transparent 24%),
-      linear-gradient(135deg, #102445 0%, #1c365d 100%);
+      radial-gradient(circle at 86% 24%, rgba(199, 203, 222, .28), transparent 24%),
+      linear-gradient(135deg, #2a015f 0%, #6d18bd 100%);
     color: #f5f6f7;
   }
   section.vuu-server h1 { color: #fff; }
-  section.vuu-server strong { color: #6ecfef; }
-  section.vuu-server small, section.vuu-server::after { color: #9abcf2; }
-  section.vuu-server li::marker { color: #54c7ec; }
+  section.vuu-server strong { color: #c7cbde; }
+  section.vuu-server small {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  section.vuu-server::after { color: #c7cbde; }
+  section.vuu-server li::marker { color: #c7cbde; }
 ---
 
 <!-- _class: lead -->
