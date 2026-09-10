@@ -95,6 +95,16 @@ style: |
     gap: 58px;
   }
   .two-columns ul { margin-top: 0; }
+  section.vuu-server {
+    background:
+      radial-gradient(circle at 86% 24%, rgba(84, 199, 236, .3), transparent 24%),
+      linear-gradient(135deg, #102445 0%, #1c365d 100%);
+    color: #f5f6f7;
+  }
+  section.vuu-server h1 { color: #fff; }
+  section.vuu-server strong { color: #6ecfef; }
+  section.vuu-server small, section.vuu-server::after { color: #9abcf2; }
+  section.vuu-server li::marker { color: #54c7ec; }
 ---
 
 <!-- _class: lead -->
@@ -127,6 +137,7 @@ style: |
 - **React** &mdash; the application UI library
 - **Salt** &mdash; the design system, including themes and components<br><small>https://www.saltdesignsystem.com/salt/index</small>
 - **Vuu** &mdash; reusable components and functionality for data-driven applications<br><small>https://github.com/finos/vuu</small>
+- **Vuu Server** &mdash; streaming real-time data
 
 *We will return to each of these in more detail.*
 
@@ -224,6 +235,16 @@ Libraries, component libraries, frameworks and the tooling that connects them.
 </div>
 
 </div>
+
+---
+
+<!-- _class: vuu-server -->
+
+# The Vuu Server
+
+- **Open-source Vuu project**<br><small>https://vuu.finos.org/desktop/</small>
+- Streaming real-time data provider for web front ends
+- A “backend for frontend”
 
 ---
 
