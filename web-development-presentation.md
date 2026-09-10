@@ -4,7 +4,7 @@ theme: default
 paginate: true
 ---
 
-# From Web Fundamentals to Modern UI Development
+# From Web Fundamentals to Modern Application Development
 
 - How the browser turns code into interfaces
 - From HTML, CSS and JavaScript to applications
@@ -24,19 +24,19 @@ paginate: true
 # The Web Development Landscape
 
 - The browser is the runtime environment
-- Websites and applications are built from layers
+- Applications are built from layers
 - HTML: structure and meaning
 - CSS: appearance and layout
 - JavaScript: behaviour and interaction
 
 ---
 
-# How a Browser Builds a Page
+# How a Browser Builds an Interface
 
 - Request and response
 - HTML creates the document structure
 - CSS is applied to the document
-- JavaScript can inspect and change the page
+- JavaScript can inspect and change the document
 - The browser renders the final result
 
 ---
@@ -134,10 +134,10 @@ paginate: true
 
 ---
 
-# From Pages to Applications
+# From UI Views to Applications
 
-- A page primarily presents information
-- An application manages interaction and state
+- An application presents information and manages interaction
+- Each UI view reflects application state
 - Applications often include:
   - Multiple views
   - Forms and validation
