@@ -213,13 +213,13 @@ paginate: true
 
 ---
 
-# Design Tools and Sigma
+# Design Tools and Figma
 
 - Design tools communicate ideas before implementation
 - Inspect layouts, spacing, typography and colour
 - Identify reusable components and states
 - Compare design intent with browser behaviour
-- Use Sigma as a bridge between design and implementation
+- Use Figma as a bridge between design and implementation
 - Ask questions when designs are ambiguous
 
 ---
